@@ -1,0 +1,6 @@
+# Bloque les fichiers système Windows
+Thumbs.db
+desktop.ini
+
+# Optionnel : ignore les dossiers cachés
+.DS_Store

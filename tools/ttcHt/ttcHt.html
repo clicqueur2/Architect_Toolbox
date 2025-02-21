@@ -1,0 +1,95 @@
+<div class="tool-section tva-calculator">
+  <h2>💶 Calculateur TVA Architecte</h2>
+
+  <!-- Sélection du pays -->
+  <div class="input-group">
+    <label>Pays</label>
+    <select id="countrySelect" class="country-select">
+      <option value="FR">France</option>
+      <option value="BE">Belgique</option>
+    </select>
+  </div>
+
+  <!-- Type de conversion -->
+  <div class="input-group">
+    <label>Type de conversion</label>
+    <select id="conversionType" class="conversion-type">
+      <option value="htToTtc">HT → TTC</option>
+      <option value="ttcToHt">TTC → HT</option>
+    </select>
+  </div>
+
+  <!-- Type de travaux (uniquement pour la France) -->
+  <div class="input-group" id="workTypeGroup">
+    <label>Nature des travaux</label>
+    <select id="workType" class="work-type">
+      <option value="new">Construction neuve</option>
+      <option value="reno">Rénovation standard</option>
+      <option value="energy">Rénovation énergétique</option>
+    </select>
+  </div>
+
+  <!-- Taux TVA (dynamique) -->
+  <div class="input-group">
+    <label>Taux TVA applicable</label>
+    <select id="tvaRate" class="tva-rate">
+      <!-- Options générées par JavaScript -->
+    </select>
+  </div>
+
+  <!-- Montant à convertir -->
+  <div class="input-group">
+    <label>Montant à convertir</label>
+    <div class="amount-line">
+      <input type="number" 
+             id="amount" 
+             placeholder="Ex: 100000" 
+             step="100"
+             class="amount-input">
+      <span class="currency">€</span>
+    </div>
+  </div>
+
+  <button id="calcTVA" class="btn-calculate">
+    Calculer
+  </button>
+
+  <!-- Résultats -->
+  <div class="result-box">
+    <h3>Résultats</h3>
+    <div class="result-content">
+      <!-- Montant HT -->
+      <h3 class="result-line">
+        <span class="result-label">Montant HT:</span>
+        <span class="result-value" id="htAmount">0.00 €</span>
+      </h3>
+
+      <!-- Montant TTC -->
+      <h3 class="result-line">
+        <span class="result-label">Montant TTC:</span>
+        <span class="result-value" id="ttcAmount">0.00 €</span>
+      </h3>
+
+      <!-- Montant TVA -->
+      <h3 class="result-line tva-highlight">
+        <span class="result-label">Montant TVA:</span>
+        <span class="result-value" id="tvaAmount">0.00 €</span>
+      </h3>
+    </div>
+  </div>
+
+  <!-- Notes légales -->
+  <div class="legal-note">
+    <small>
+      <strong>⚠️ Réglementation TVA :</strong><br>
+      <span id="legalTextFR">
+        FR : 20% (neuf), 10% (rénovation*), 5.5% (énergétique)
+      </span>
+      <span id="legalTextBE" style="display:none">
+        BE : TVA standard fixe à 21% (tous travaux)
+      </span>
+      <br>
+      <em>*Applicable sous conditions (surface &lt; 150m², logement de plus de 2 ans)</em>
+    </small>
+  </div>
+</div>

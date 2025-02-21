@@ -1,0 +1,59 @@
+<div class="tool-section insurance-calculator">
+  <h2>🛡️ Cotisations MAF</h2>
+
+  <div class="input-group">
+    <label>Montant des travaux HT</label>
+    <input type="number" id="montant" placeholder="Ex : 150000" class="montant-input">
+  </div>
+
+  <div class="input-group">
+    <label>Taux de mission</label>
+    <select id="taux">
+      <option value="100">Mission complète (100%)</option>
+      <option value="60">Permis de construire + Dossier de consultation (60%)</option>
+      <option value="30">Permis de construire (30%)</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <label>Nombre de cotraitants (1-10)</label>
+    <input type="number" id="cotraitants" value="1" step="1" min="1" max="10">
+  </div>
+
+  <div class="input-group">
+    <label><input type="checkbox" id="protectionCheckbox" checked> Inclure la protection juridique</label>
+  </div>
+
+  <button id="calcInsurance" class="btn-calculate">Calculer</button>
+
+  <div class="result-box">
+    <h3 class="result-title">Détail des cotisations</h3>
+    <table class="insurance-table">
+      <tr>
+        <td>Assiette de calcul</td>
+        <td id="base">0.00 €</td>
+      </tr>
+      <tr>
+        <td>Cotisation de base (5.772‰)</td>
+        <td id="cotisation">0.00 €</td>
+      </tr>
+      <tr id="protectionRow">
+        <td>Protection juridique (1.65‰)</td>
+        <td id="protection">0.00 €</td>
+      </tr>
+      <tr>
+        <td>RC exploitation (0.11‰)</td>
+        <td id="rc">0.00 €</td>
+      </tr>
+      <tr class="total-row">
+        <td colspan="2">
+          <h3 class="total-title">Total TAC <span id="total">0.00 €</span></h3>
+      </h3>
+    </table>
+  </div>
+
+  <div class="legal-notice">
+    <p>Calcul basé sur les taux MAF 2024<br>
+    <small>Les montants sont donnés à titre indicatif</small></p>
+  </div>
+</div>

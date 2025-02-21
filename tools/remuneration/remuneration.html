@@ -1,0 +1,41 @@
+<div class="tool-section">
+    <h2>💼 Honoraires Architecte</h2>
+  
+    <div class="input-group">
+      <label>Montant des travaux HT</label>
+      <input type="number" id="montantTravaux" placeholder="Ex : 200 000">
+    </div>
+  
+    <div class="input-group">
+      <label>Complexité du projet</label>
+      <select id="complexite">
+        <option value="basique">Basique - Bâtiment agricole</option>
+        <option value="standard" selected>Standard - Maison individuelle</option>
+        <option value="complexe">Complexe - Rénovation patrimoniale</option>
+      </select>
+    </div>
+  
+    <button id="calcHonoraires">Calculer</button>
+  
+    <div class="result-box">
+      <h3>Répartition des honoraires</h3>
+      <div class="result-grid">
+        <div>Total HT :</div>
+        <div id="totalHT">0.00 €</div>
+        
+        <div>TVA (20%) :</div>
+        <div id="tva">0.00 €</div>
+        
+        <div class="total">Total TTC :</div>
+        <div class="total" id="totalTTC">0.00 €</div>
+      </div>
+      
+      <h4>Par phase de mission :</h4>
+      <ul>
+        <li>Avant-projet : <span id="phase1">0.00 €</span></li>
+        <li>Permis de construire : <span id="phase2">0.00 €</span></li>
+        <li>DCE : <span id="phase3">0.00 €</span></li>
+        <li>Chantier : <span id="phase4">0.00 €</span></li>
+      </ul>
+    </div>
+  </div>

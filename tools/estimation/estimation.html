@@ -1,0 +1,43 @@
+<div class="tool-section">
+  <h2>🏗 Estimation des coûts de travaux</h2>
+
+  <div class="input-group">
+    <label>Type de projet</label>
+    <select id="typeProjet">
+      <option value="global">Ratio global (tous types)</option>
+      <option value="habitats_isoles" class="premium-feature">Habitats isolés</option>
+      <option value="habitats_groupes" class="premium-feature">Habitats groupés</option>
+      <option value="activites_services" class="premium-feature">Activités de service</option>
+      <option value="equipements_publics" class="premium-feature">Équipements publics</option>
+      <option value="locaux_production" class="premium-feature">Locaux de production</option>
+      <option value="divers_autres" class="premium-feature">Divers autres</option>
+    </select>
+  </div>
+
+  <div class="input-group premium-feature" id="sousCatGroup" style="display:none;">
+    <label>Détail du projet</label>
+    <select id="sousCategorie">
+      <option value="global">Global</option>
+    </select>
+  </div>
+
+  <div class="input-group" id="surfaceGroup">
+    <label>Surface de plancher (m²)</label>
+    <input type="number" id="surface" placeholder="Ex: 120">
+  </div>
+
+  <div class="input-group">
+    <label>Niveau de finition</label>
+    <select id="finition">
+      <option value="economique">Économique</option>
+      <option value="standard">Standard</option>
+      <option value="haut_gamme">Haut de gamme</option>
+    </select>
+  </div>
+
+  <button id="btnCalculer">Calculer</button>
+
+  <div class="result-box" id="resultEstimation">
+    <!-- Résultats dynamiques -->
+  </div>
+</div>

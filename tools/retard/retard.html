@@ -1,0 +1,36 @@
+<div class="tool-section">
+    <h2 class="conversion-title">Calculateur de pénalités</h2>
+    
+    <div class="input-group">
+      <label>Date d'échéance de la facture</label>
+      <input type="date" id="dueDate" required>
+      <small class="hint">Date indiquée sur la facture</small>
+    </div>
+  
+    <div class="input-group">
+      <label>Montant facture (€)</label>
+      <input type="number" id="amount" step="0.01" required>
+    </div>
+  
+    <div class="input-group">
+      <label>Taux des pénalités (%) 
+        <a href="https://entreprendre.service-public.fr/actualites/A15398" 
+           target="_blank" 
+           class="info-link"
+           title="Vérifier le taux applicable">
+          ℹ️
+        </a>
+      </label>
+      <input type="number" id="penaltyRate" step="0.01" required>
+    </div>
+  
+    <div class="input-group">
+      <label class="conversion-title">
+        <input type="checkbox" id="isProfessional"> Débiteur professionnel
+      </label>
+    </div>
+  
+    <button id="calculateBtn" class="primary-btn">Calculer</button>
+  
+    <div id="result" class="result-box"></div>
+  </div>

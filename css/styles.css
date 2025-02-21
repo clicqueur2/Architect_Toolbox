@@ -1,0 +1,203 @@
+/* ====== Chargement des polices Roboto ====== */
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ====== Variables CSS ====== */
+:root {
+  --primary-color: #2b6cb0;
+  --secondary-color: #4299e1;
+  --success-color: #48bb78;
+  --error-color: #f56565;
+  --text-color: #2d3748;
+  --bg-color: #f7fafc;
+  --border-color: #e2e8f0;
+}
+
+/* ====== Reset de base ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== Styles généraux ====== */
+body {
+  font-family: 'Roboto', system-ui, sans-serif;
+  font-weight: 400;
+  color: var(--text-color);
+  background: var(--bg-color);
+  line-height: 1.4;
+  font-size: 16px;
+}
+
+/* ====== Structure de layout ====== */
+.app-container {
+  width: 100%;
+  max-width: 450px;
+  min-height: 650px;
+  padding: 1.5rem;
+}
+
+.tool-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* ====== Composants de formulaire ====== */
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.conversion-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.8rem;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+}
+
+button:hover {
+  background: #2c5282;
+}
+
+/* ====== Résultats ====== */
+.result-box {
+  margin: 1.2rem 0;
+  padding: 0.8rem;
+  background: #ebf8ff;
+  border-radius: 6px;
+}
+
+.result-line {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  line-height: 1.2;
+}
+
+.result-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #4a5568;
+  flex-shrink: 0;
+}
+
+#slopeResult, #percentResult {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+/* ====== Calculateur TVA ====== */
+.tva-calculator .result-content p {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  margin: 0.8rem 0;
+}
+
+.tva-calculator h3 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.tva-amount h3 {
+  color: var(--error-color);
+}
+
+/* ====== Références ====== */
+.reference-info {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #edf2f7;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.reference-info ul {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.reference-info li {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.reference-info li::before {
+  content: "•";
+  color: var(--primary-color);
+  position: absolute;
+  left: -1.2rem;
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 400px) {
+  .app-container {
+    padding: 1rem;
+  }
+
+  .conversion-title {
+    font-size: 1.1rem;
+  }
+
+  #slopeResult, #percentResult {
+    font-size: 1.5rem;
+  }
+
+  .result-label {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+/* ====== Animations ====== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tool-content {
+  animation: fadeIn 0.3s ease-out;
+}
